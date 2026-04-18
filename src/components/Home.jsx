@@ -1,6 +1,6 @@
 function Page() {
     return(
-        <div>THIS MY PAGE AYO AYOOO</div>
+        <div>THIS MY HOMEPAGE AYO AYOOO</div>
     )
 }
 
