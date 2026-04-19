@@ -1,22 +1,37 @@
-import Home from "./components/Home"
-import Shop from "./components/Shop";
-import Cart from "./components/Cart";
+// import { redirect } from "react-router";
 import ErrorPage from "./components/ErrorPage";
+import Store from "./components/Store";
+
+
+
 
 const routes = [
   {
     path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />,
+    element: <Store />,
+    errorElement: <ErrorPage />, 
   },
   {
-    path: "shop",
-    element: <Shop />,
-  },
-  {
-    path: "cart",
-    element: <Cart />,
-  },
+    path: "store/:name",
+    element: <Store />,
+    errorElement: <ErrorPage />
+  }
 ];
+
+// const routes = [
+//   {
+//     path: "/",
+//     element: <Home />,
+//     errorElement: <ErrorPage />,
+//   },
+//   {
+//     path: "shop",
+//     element: <Shop />,
+//   },
+//   {
+//     path: "cart",
+//     element: <Cart />,
+//   },
+// ];
 
 export default routes;

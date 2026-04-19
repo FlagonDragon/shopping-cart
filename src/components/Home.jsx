@@ -7,10 +7,10 @@ function Page() {
         <nav>
             <ul>
                 <li>
-                    <Link to="shop">Shop!</Link>
+                    <Link to="/store/shop">Shop!</Link>
                 </li>
                 <li>
-                    <Link to="cart">Cart!</Link>
+                    <Link to="/store/cart">Cart!</Link>
                 </li>
             </ul>
         </nav>
