@@ -10,7 +10,7 @@ function Shop() {
                     <Link to="/">Home!</Link>
                 </li>
                 <li>
-                    <Link to="/cart">Cart!</Link>
+                    <Link to="/store/cart">Cart!</Link>
                 </li>
             </ul>
         </nav>

@@ -1,6 +1,8 @@
 // import { redirect } from "react-router";
+import { Children } from "react";
 import ErrorPage from "./components/ErrorPage";
 import Store from "./components/Store";
+import { Navigate } from "react-router";
 
 
 
@@ -8,8 +10,8 @@ import Store from "./components/Store";
 const routes = [
   {
     path: "/",
-    element: <Store />,
-    errorElement: <ErrorPage />, 
+    element: <Navigate to="/store/home" replace />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "store/:name",

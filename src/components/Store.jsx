@@ -8,6 +8,12 @@ import ErrorPage from "./ErrorPage";
 // import { useEffect } from "react";
 
 
+// READ THIS BELOW
+
+// https://stackoverflow.com/questions/70437952/is-there-a-way-to-set-a-default-route-with-react-router-v6
+
+// READ THIS ABOVE
+
 
 
 function Store() {
@@ -51,7 +57,7 @@ function Store() {
         ) : name === 'cart' ? (
             <Cart></Cart>
         ) : (
-            <Home></Home>
+            <ErrorPage></ErrorPage>
         )}
 
     </>
