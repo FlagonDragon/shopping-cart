@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { useParams } from "react-router";
+import Header from "./Header";
 import Shop from "./Shop";
 import Cart from "./Cart";
 import Home from "./Home";
@@ -38,17 +39,7 @@ function Store() {
     return(
     <>
 
-        <div>
-            <nav><div>
-                <Link to="/store/home">Home</Link>
-            </div></nav>
-            <nav><div>
-                <Link to="/store/shop">Shop</Link>
-            </div></nav>
-            <nav><div>
-                <Link to="/store/cart">Cart</Link>
-            </div></nav>
-        </div>
+        <Header></Header>
 
         {(name === 'home') ? (
             <Home></Home>
