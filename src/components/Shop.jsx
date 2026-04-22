@@ -1,20 +1,12 @@
-import { Link } from "react-router";
+import Card from "./Card";
+import classes from "../styles/Shop.module.css";
 
 function Shop() {
     return(
-    <>
+    <div className={classes.container}>
         <div>SHOP SHOP SHOPPINNNN</div>
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home!</Link>
-                </li>
-                <li>
-                    <Link to="/store/cart">Cart!</Link>
-                </li>
-            </ul>
-        </nav>
-    </>
+        <Card></Card>
+    </div>
     )
 }
 
