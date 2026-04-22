@@ -5,8 +5,7 @@ import Shop from "./Shop";
 import Cart from "./Cart";
 import Home from "./Home";
 import ErrorPage from "./ErrorPage";
-// import { useNavigate  } from "react-router";
-// import { useEffect } from "react";
+import classes from "../styles/Store.module.css"
 
 
 // READ THIS BELOW
@@ -41,15 +40,17 @@ function Store() {
 
         <Header></Header>
 
-        {(name === 'home') ? (
-            <Home></Home>
-        ) : name === 'shop' ? (
-            <Shop></Shop>
-        ) : name === 'cart' ? (
-            <Cart></Cart>
-        ) : (
-            <ErrorPage></ErrorPage>
-        )}
+        <div className={classes.container}>
+            {(name === 'home') ? (
+                <Home></Home>
+            ) : name === 'shop' ? (
+                <Shop></Shop>
+            ) : name === 'cart' ? (
+                <Cart></Cart>
+            ) : (
+                <ErrorPage></ErrorPage>
+            )}
+        </div>
 
     </>
     )

@@ -1,21 +1,22 @@
+import { Navigate } from "react-router";
 import { Link } from "react-router";
+import { useNavigate } from "react-router";
+import classes from '../styles/Home.module.css';
 
-function Page() {
+function Home() {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/store/shop');
+    }
+
     return(
-    <>
-        <div>THIS MY HOMEPAGE AYO AYOOO</div>
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/store/shop">Shop!</Link>
-                </li>
-                <li>
-                    <Link to="/store/cart">Cart!</Link>
-                </li>
-            </ul>
-        </nav>
-    </>
+    <div className={classes.container}>
+        <div>The store<br /><em>for you</em></div>
+        <button onClick={handleClick}>Shop now</button>
+    </div>
     )
 }
 
-export default Page;
+export default Home;
