@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+    background-color: #62217c;
+    color: #c6ebd2;
+}
+
+:root a {
+    color: #c6ebd2;
+    text-decoration: none;
+}

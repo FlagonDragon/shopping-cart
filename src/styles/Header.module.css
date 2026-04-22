@@ -1,4 +1,18 @@
 .container {
-    background-color: black;
-    color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #9b59b6;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-bottom: 3px solid black;
+}
+
+.middleDiv {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 }

@@ -8,7 +8,7 @@ function Header() {
             <nav><div>
                 <Link to="/store/home">Home</Link>
             </div></nav>
-            <nav><div>
+            <nav><div className={classes.middleDiv}>
                 <Link to="/store/shop">Shop</Link>
             </div></nav>
             <nav><div>
