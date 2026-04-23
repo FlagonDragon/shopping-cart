@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 200px;
+    width: 280px;
+    border: 5px solid;
+    border-color: black;
+}
+
+.colorDiv{
+    color: #c6ebd2;
+    color: #50c878;
+    color: #9b59b6;
+    color: #8e2eb6;
+    color: #62217c;
+}
+
+.imgDiv {
+    padding: 15px;
+    background-color: #c6ebd2;
+    /* margin-bottom: 20px; */
+}
+
+.dataDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #8e2eb6;
+    color: #c6ebd2;
+}
+
+.myImg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
