@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import classes from "../styles/Card.module.css";
+import AddToCart from "./AddToCart";
 
 
 function Card({id}) {
@@ -41,6 +42,7 @@ function Card({id}) {
             <div className={classes.dataDiv}>
               <div className={classes.titleDiv}>{data.title}</div>
               <div>${data.price}</div>
+              <AddToCart></AddToCart>
             </div>
         </div>
     )
