@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from "../styles/Card.module.css";
 
 
-function Card() {
+function Card({id}) {
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -12,7 +12,7 @@ function Card() {
 
       try {        
 
-        const response = await fetch(`https://fakestoreapi.com/products/1`);
+        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
 
         const productData = await response.json();
 
@@ -29,7 +29,7 @@ function Card() {
 
     getProduct();
 
-  }, [])
+  }, [id])
 
     return(
         <div className={classes.container}>
@@ -39,7 +39,7 @@ function Card() {
             </div>
 
             <div className={classes.dataDiv}>
-              <div>{data.title}</div>
+              <div className={classes.titleDiv}>{data.title}</div>
               <div>${data.price}</div>
             </div>
         </div>
