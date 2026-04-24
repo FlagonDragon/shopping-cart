@@ -7,9 +7,6 @@ for (let i = 1; i <= 20; i++) {
     productIds.push(i);
 }
 
-console.log(productIds);
-
-
 function Shop() {
     return(
     <div className={classes.container}>
