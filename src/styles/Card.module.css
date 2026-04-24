@@ -17,10 +17,21 @@
     color: #62217c;
 }
 
-.imgDiv {
+.topDiv {
     padding: 15px;
     background-color: #c6ebd2;
     /* margin-bottom: 20px; */
+}
+
+.botDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0px;
+    background-color: #8e2eb6;
+    color: #c6ebd2;
 }
 
 .dataDiv {
@@ -29,13 +40,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 10px;
-    background-color: #8e2eb6;
-    color: #c6ebd2;
+    height: 100%;
+    /* border: 2px solid gold; */
 }
 
 .titleDiv {
-    line-clamp: 4;
+    line-clamp: 3;
     /* max-height: 80px;
     overflow: hidden;
     text-overflow: ellipsis;  */
@@ -46,4 +56,9 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+.addDiv {
+    height: 50px;
+    border: 10px solid red;
 }

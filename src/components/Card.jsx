@@ -35,15 +35,21 @@ function Card({id}) {
     return(
         <div className={classes.container}>
 
-            <div className={classes.imgDiv}>
+            <div className={classes.topDiv}>
               <img className={classes.myImg} src={data.image}></img>
             </div>
 
-            <div className={classes.dataDiv}>
-              <div className={classes.titleDiv}>{data.title}</div>
-              <div>${data.price}</div>
+            <div className={classes.botDiv}>
+
+              <div className={classes.dataDiv}>
+                <div className={classes.titleDiv}>{data.title}</div>
+                <div>${data.price}</div>
+              </div>
+
               <AddToCart></AddToCart>
+
             </div>
+
         </div>
     )
 }
