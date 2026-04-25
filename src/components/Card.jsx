@@ -41,12 +41,17 @@ function Card({id}) {
 
             <div className={classes.botDiv}>
 
-              <div className={classes.dataDiv}>
-                <div className={classes.titleDiv}>{data.title}</div>
-                <div>${data.price}</div>
+              <div className={classes.titleDiv}>{data.title}</div>
+
+
+              <div className={classes.cartDiv}>
+
+                <div className={classes.priceDiv}>${data.price}</div>
+
+                <AddToCart></AddToCart>
+
               </div>
 
-              <AddToCart></AddToCart>
 
             </div>
 
