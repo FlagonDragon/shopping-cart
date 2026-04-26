@@ -1,21 +1,24 @@
-import { Link } from "react-router";
+import Card from "./Card";
+import classes from "../styles/Shop.module.css";
 
-function Cart({ inCart }) {
+function Cart({ items }) {
     return(
-    <>
-        <div>WE BE IN THE CART</div>
-        <div>Items in cart: {inCart}</div>
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/">Home!</Link>
-                </li>
-                <li>
-                    <Link to="/store/shop">Shop!</Link>
-                </li>
-            </ul>
-        </nav>
-    </>
+    <div className={classes.container}>
+
+        {items.map((item) => {
+
+            if (item.n > 0) {
+
+                return <Card 
+                    key={item.id} 
+                    id={item.id}  
+                ></Card>
+
+            }
+
+        })}
+
+    </div>
     )
 }
 

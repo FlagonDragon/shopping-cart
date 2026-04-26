@@ -1,20 +1,14 @@
 import Card from "./Card";
 import classes from "../styles/Shop.module.css";
 
-let productIds = [];
-
-for (let i = 1; i <= 20; i++) {
-    productIds.push(i);
-}
-
-function Shop({ handleClick }) {
+function Shop({ items, handleClick }) {
     return(
     <div className={classes.container}>
 
-        {productIds.map((productId) => {
+        {items.map((item) => {
             return <Card 
-                key={productId} 
-                id={productId}  
+                key={item.id} 
+                id={item.id}  
                 handleClick={handleClick}
             ></Card>
         })}

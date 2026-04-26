@@ -19,8 +19,7 @@ function Card({ id , handleClick}) {
 
         setData(productData);
 
-        console.log(productData);
-        
+        // console.log(productData);
         
       } catch (error) {
         console.error(error);

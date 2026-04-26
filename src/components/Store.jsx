@@ -5,7 +5,29 @@ import Shop from "./Shop";
 import Cart from "./Cart";
 import Home from "./Home";
 import ErrorPage from "./ErrorPage";
-import classes from "../styles/Store.module.css"
+import classes from "../styles/Store.module.css";
+
+let items = [];
+
+for (let i = 1; i <= 20; i++) {
+    items.push({id: i, n: 0});
+}
+
+function totalItems() {
+
+    let total = 0;
+
+    items.forEach((item) => {
+        total += item.n;
+    })
+        
+    console.log(total);
+
+}
+
+console.log(items);
+
+totalItems();
 
 function Store() {
     const { name } = useParams();
@@ -28,9 +50,9 @@ function Store() {
             {(name === 'home') ? (
                 <Home></Home>
             ) : name === 'shop' ? (
-                <Shop handleClick={handleClick}></Shop>
+                <Shop items={items} handleClick={handleClick}></Shop>
             ) : name === 'cart' ? (
-                <Cart inCart={inCart}></Cart>
+                <Cart items={items}></Cart>
             ) : (
                 <ErrorPage></ErrorPage>
             )}
