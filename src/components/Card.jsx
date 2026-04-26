@@ -48,6 +48,7 @@ function Card({ id , handleClick}) {
                 <div className={classes.priceDiv}>${data.price}</div>
 
                 <AddToCart 
+                  id={id}
                   handleClick={handleClick}
                 ></AddToCart>
 

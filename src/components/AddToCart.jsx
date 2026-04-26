@@ -1,12 +1,12 @@
 import { useState } from "react";
 import classes from "../styles/AddToCart.module.css";
 
-function AddToCart({ handleClick }) {
+function AddToCart({ id, handleClick }) {
     const [value, setValue] = useState('');
     
     function onClick() {
         // console.log(handleClick);
-        handleClick(value);
+        handleClick(id, Number(value));
         setValue('');
     }
 
