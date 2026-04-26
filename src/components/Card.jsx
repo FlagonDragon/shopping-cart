@@ -4,7 +4,7 @@ import classes from "../styles/Card.module.css";
 import AddToCart from "./AddToCart";
 
 
-function Card({id}) {
+function Card({ id , handleClick}) {
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -48,7 +48,9 @@ function Card({id}) {
 
                 <div className={classes.priceDiv}>${data.price}</div>
 
-                <AddToCart></AddToCart>
+                <AddToCart 
+                  handleClick={handleClick}
+                ></AddToCart>
 
               </div>
 

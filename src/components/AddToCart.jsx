@@ -1,13 +1,13 @@
 import { useState } from "react";
 import classes from "../styles/AddToCart.module.css";
 
-function AddToCart() {
-    const [value, setValue] = useState("");
-    const [onCart, setOnCart] = useState(0);
+function AddToCart({ handleClick }) {
+    const [value, setValue] = useState('');
     
-    function handleClick() {
-        setOnCart(Number(onCart)+Number(value));
-        console.log(onCart);
+    function onClick() {
+        // console.log(handleClick);
+        handleClick(value);
+        setValue('');
     }
 
     return(
@@ -24,7 +24,7 @@ function AddToCart() {
             ></input>
             <button 
                 className={classes.btnDiv}
-                onClick={handleClick}
+                onClick={onClick}
             >Add to Cart</button>
         </div>
     )

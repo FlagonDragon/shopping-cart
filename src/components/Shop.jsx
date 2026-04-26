@@ -7,12 +7,16 @@ for (let i = 1; i <= 20; i++) {
     productIds.push(i);
 }
 
-function Shop() {
+function Shop({ handleClick }) {
     return(
     <div className={classes.container}>
 
         {productIds.map((productId) => {
-            return <Card key={productId} id={productId}></Card>
+            return <Card 
+                key={productId} 
+                id={productId}  
+                handleClick={handleClick}
+            ></Card>
         })}
 
     </div>
