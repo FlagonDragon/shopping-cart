@@ -17,9 +17,13 @@ function AddToCart({ handleClick }) {
                 type="number" 
                 min={0} 
                 max={99}
+                maxLength="1"
                 value={value}
                 onChange={
-                    (e) => setValue(e.target.value)
+                    (e) => {
+                        let validValue = e.target.value.slice(0, 2);
+                        setValue(validValue)
+                    }
                 }          
             ></input>
             <button 

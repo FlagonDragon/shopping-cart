@@ -12,7 +12,11 @@ function Store() {
     const [onCart, setOnCart] = useState(0);
 
     function handleClick(value) {
-        setOnCart(Number(onCart)+Number(value));
+        if ((Number(onCart)+Number(value)) < 1000) {
+            setOnCart(Number(onCart)+Number(value));
+        } else {
+            setOnCart(Number(onCart));
+        }
     }
 
     return(
