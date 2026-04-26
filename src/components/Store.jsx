@@ -9,20 +9,20 @@ import classes from "../styles/Store.module.css"
 
 function Store() {
     const { name } = useParams();
-    const [onCart, setOnCart] = useState(0);
+    const [inCart, setInCart] = useState(0);
 
     function handleClick(value) {
-        if ((Number(onCart)+Number(value)) < 1000) {
-            setOnCart(Number(onCart)+Number(value));
+        if ((Number(inCart)+Number(value)) < 1000) {
+            setInCart(Number(inCart)+Number(value));
         } else {
-            setOnCart(Number(onCart));
+            setInCart(Number(inCart));
         }
     }
 
     return(
     <>
 
-        <Header onCart={onCart}></Header>
+        <Header inCart={inCart}></Header>
 
         <div className={classes.container}>
             {(name === 'home') ? (
@@ -30,7 +30,7 @@ function Store() {
             ) : name === 'shop' ? (
                 <Shop handleClick={handleClick}></Shop>
             ) : name === 'cart' ? (
-                <Cart></Cart>
+                <Cart inCart={inCart}></Cart>
             ) : (
                 <ErrorPage></ErrorPage>
             )}

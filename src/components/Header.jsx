@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import classes from "../styles/Header.module.css";
 
-function Header({ onCart }) {
+function Header({ inCart }) {
     
     return(
         <div className={classes.container}>
@@ -12,7 +12,7 @@ function Header({ onCart }) {
                 <Link to="/store/shop">Shop</Link>
             </div></nav>
             <nav><div>
-                <Link to="/store/cart">Cart ({onCart})</Link>
+                <Link to="/store/cart">Cart ({inCart})</Link>
             </div></nav>
         </div>
     )

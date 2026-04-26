@@ -13,8 +13,10 @@ function Home() {
 
     return(
     <div className={classes.container}>
-        <div>The store<br /><em>for you</em></div>
-        <button onClick={handleClick}>Shop now</button>
+        <div className={classes.background}>
+            <div>The store<br /><em>for you</em></div>
+            <button onClick={handleClick}>Shop now</button>
+        </div>
     </div>
     )
 }

@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 
-function Cart() {
+function Cart({ inCart }) {
     return(
     <>
         <div>WE BE IN THE CART</div>
+        <div>Items in cart: {inCart}</div>
         <nav>
             <ul>
                 <li>

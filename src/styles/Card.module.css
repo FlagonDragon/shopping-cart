@@ -9,17 +9,9 @@
     
 }
 
-.colorDiv{
-    color: #c6ebd2;
-    color: #50c878;
-    color: #9b59b6;
-    color: #8e2eb6;
-    color: #62217c;
-}
-
 .topDiv {
     padding: 15px;
-    background-color: #c6ebd2;
+    background-color: #B97CFB;
     /* margin-bottom: 20px; */
 }
 
@@ -36,8 +28,8 @@
     align-items: center;
     padding: 15px;
     padding-top: 15px;
-    background-color: #8e2eb6;
-    color: #c6ebd2;
+    background-color: #ad55d8;
+    color: #F8E3B9;
 }
 
 .cartDiv {
