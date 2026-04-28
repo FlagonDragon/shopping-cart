@@ -5,7 +5,6 @@ function AddToCart({ id, handleClick }) {
     const [value, setValue] = useState('');
     
     function onClick() {
-        // console.log(handleClick);
         handleClick(id, Number(value));
         setValue('');
     }

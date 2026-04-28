@@ -10,6 +10,7 @@ function Shop({ items, handleClick }) {
                 key={item.id} 
                 id={item.id}  
                 handleClick={handleClick}
+                page='shop'
             ></Card>
         })}
 

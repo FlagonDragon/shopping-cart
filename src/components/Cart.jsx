@@ -12,6 +12,7 @@ function Cart({ items }) {
                 return <Card 
                     key={item.id} 
                     id={item.id}  
+                    page='cart'
                 ></Card>
 
             }

@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import classes from "../styles/Card.module.css";
 import AddToCart from "./AddToCart";
+import CartMenu from "./CartMenu";
 
 
-function Card({ id , handleClick}) {
+function Card({ id , handleClick, page}) {
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -47,11 +48,17 @@ function Card({ id , handleClick}) {
 
                 <div className={classes.priceDiv}>${data.price}</div>
 
-                <AddToCart 
-                  id={id}
-                  handleClick={handleClick}
-                ></AddToCart>
-
+                { page == 'shop' ? (
+                  <AddToCart 
+                    id={id}
+                    handleClick={handleClick}
+                  ></AddToCart>
+                ) : (
+                  <CartMenu
+                    id={id}
+                  ></CartMenu>
+                )}
+                
               </div>
 
 
