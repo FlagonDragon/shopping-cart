@@ -5,7 +5,7 @@ import AddToCart from "./AddToCart";
 import CartMenu from "./CartMenu";
 
 
-function Card({ id , handleClick, page}) {
+function Card({ item , handleClick, page}) {
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -14,7 +14,7 @@ function Card({ id , handleClick, page}) {
 
       try {        
 
-        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const response = await fetch(`https://fakestoreapi.com/products/${item.id}`);
 
         const productData = await response.json();
 
@@ -30,7 +30,7 @@ function Card({ id , handleClick, page}) {
 
     getProduct();
 
-  }, [id])
+  }, [item])
 
     return(
         <div className={classes.container}>
@@ -50,12 +50,12 @@ function Card({ id , handleClick, page}) {
 
                 { page == 'shop' ? (
                   <AddToCart 
-                    id={id}
+                    item={item}
                     handleClick={handleClick}
                   ></AddToCart>
                 ) : (
                   <CartMenu
-                    id={id}
+                    item={item}
                   ></CartMenu>
                 )}
                 

@@ -1,10 +1,10 @@
 import classes from "../styles/CartMenu.module.css";
 
-function CartMenu({ id }) {
+function CartMenu({ item }) {
 
     return(
         <div className={classes.container}>
-           <div>Amount: {id}</div>
+           <div>Amount: {item.n}</div>
         </div>
     )
 }

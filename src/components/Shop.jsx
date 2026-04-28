@@ -6,12 +6,16 @@ function Shop({ items, handleClick }) {
     <div className={classes.container}>
 
         {items.map((item) => {
+
+            console.log(item);
+            
             return <Card 
                 key={item.id} 
-                id={item.id}  
+                item={item}  
                 handleClick={handleClick}
                 page='shop'
             ></Card>
+
         })}
 
     </div>

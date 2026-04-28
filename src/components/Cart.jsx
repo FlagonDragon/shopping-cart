@@ -11,7 +11,7 @@ function Cart({ items }) {
 
                 return <Card 
                     key={item.id} 
-                    id={item.id}  
+                    item={item}  
                     page='cart'
                 ></Card>
 
