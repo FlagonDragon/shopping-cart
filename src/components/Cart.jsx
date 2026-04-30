@@ -1,7 +1,7 @@
 import Card from "./Card";
 import classes from "../styles/Shop.module.css";
 
-function Cart({ items }) {
+function Cart({ items , handleClick }) {
     return(
     <div className={classes.container}>
 
@@ -12,6 +12,7 @@ function Cart({ items }) {
                 return <Card 
                     key={item.id} 
                     item={item}  
+                    handleClick={handleClick}
                     page='cart'
                 ></Card>
 

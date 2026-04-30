@@ -56,6 +56,7 @@ function Card({ item , handleClick, page}) {
                 ) : (
                   <CartMenu
                     item={item}
+                    handleClick={handleClick}
                   ></CartMenu>
                 )}
                 

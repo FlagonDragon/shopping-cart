@@ -28,19 +28,54 @@ function totalItems(myItems) {
 function Store() {
     const { name } = useParams();
     const [items, setItems] = useState(itemsArray);
-    const [inCart, setInCart] = useState(totalItems(items));
 
-    function handleClick(id, value) {
+    let inCart = totalItems(items);
 
-        if ((inCart+value) < 1000) {
+    function shopAdd(id, value) {
 
-            setInCart(inCart+value);
-            
-            console.log(totalItems(items));
-            
+        if ((inCart+value) < 1000 && (items[id-1].n + value) < 100) {            
 
             let newItems = [...items];
             newItems[id-1].n += value;
+            console.log(newItems);
+            setItems(newItems);
+
+        } 
+
+    }
+
+    function cartEdit(id, action) {
+
+        if (action == 'add') {
+
+            if ((inCart+1) < 1000 && (items[id-1].n + 1) < 100) {
+
+                let newItems = [...items];
+                newItems[id-1].n += 1;
+                console.log(newItems);
+                setItems(newItems);
+
+            } 
+
+        }
+
+        if (action == 'substract') {
+
+            if ((inCart-1) >= 0 && (items[id-1].n - 1) >= 0) {
+
+                let newItems = [...items];
+                newItems[id-1].n -= 1;
+                console.log(newItems);
+                setItems(newItems);
+
+            } 
+
+        }
+
+        if (action == 'delete') {
+
+            let newItems = [...items];
+            newItems[id-1].n = 0;
             console.log(newItems);
             setItems(newItems);
 
@@ -57,9 +92,9 @@ function Store() {
             {(name === 'home') ? (
                 <Home></Home>
             ) : name === 'shop' ? (
-                <Shop items={items} handleClick={handleClick}></Shop>
+                <Shop items={items} handleClick={shopAdd}></Shop>
             ) : name === 'cart' ? (
-                <Cart items={items}></Cart>
+                <Cart items={items} handleClick={cartEdit}></Cart>
             ) : (
                 <ErrorPage></ErrorPage>
             )}
