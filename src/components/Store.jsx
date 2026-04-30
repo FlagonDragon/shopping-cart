@@ -10,7 +10,7 @@ import classes from "../styles/Store.module.css";
 let itemsArray = [];
 
 for (let i = 1; i <= 20; i++) {
-    itemsArray.push({id: i, n: 0});
+    itemsArray.push({id: i, n: 1});
 }
 
 function totalItems(myItems) {

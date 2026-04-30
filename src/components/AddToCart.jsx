@@ -26,7 +26,7 @@ function AddToCart({ item, handleClick }) {
                 }          
             ></input>
             <button 
-                className={classes.btnDiv}
+                className={classes.btnEle}
                 onClick={onClick}
             >Add to Cart</button>
         </div>
