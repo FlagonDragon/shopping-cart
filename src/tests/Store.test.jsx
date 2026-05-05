@@ -2,15 +2,15 @@ import { describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 // import { screen } from "@testing-library/react";
 // import userEvent from "@testing-library/user-event";
-import Home from '../components/Home'
+import Store from '../components/Store'
 
-describe("Home component", () => {
+describe("Store component", () => {
   it("shows button text", () => {
 
     // const { container } = render(<Store />);
     // expect(container).toMatchSnapshot();
 
-    render(<Home />)
+    render(<Store />)
 
     expect(screen.getByRole("button").textContent).toMatch(/shop now/i);
 

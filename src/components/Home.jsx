@@ -1,5 +1,3 @@
-import { Navigate } from "react-router";
-import { Link } from "react-router";
 import { useNavigate } from "react-router";
 import classes from '../styles/Home.module.css';
 

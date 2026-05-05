@@ -8,6 +8,9 @@ import CartMenu from "./CartMenu";
 function Card({ item , handleClick, page}) {
     const [data, setData] = useState({});
 
+    console.log(item);
+    
+
     useEffect(() => {
 
     async function getProduct() {
