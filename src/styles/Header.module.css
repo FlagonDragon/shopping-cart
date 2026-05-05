@@ -28,10 +28,11 @@
 }
 
 .inCart {
+    width: 45px;
+    text-align: center;
     padding: 6px;
     border: 3px solid #A4BDFF;
     border-radius: 50%;
-    /* color: #AB9BFF; */
     background-color: #B97CFB;
 }
 
