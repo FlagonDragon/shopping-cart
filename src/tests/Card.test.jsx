@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
+import { vi, describe, it, expect } from "vitest";
 import { render } from "@testing-library/react";
 import { screen } from "@testing-library/react";
-// import userEvent from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import Card from '../components/Card'
 
 describe("Card component", () => {
@@ -14,17 +14,21 @@ describe("Card component", () => {
 
   });
 
-  it("adds to cart", async () => {
+  it("test button", async () => {
 
-    // const user = userEvent.setup();
+    const onClick = vi.fn();
 
-    render(<Card id={{id: 1, n: 1}} page='shop' />);
+    const user = userEvent.setup();
 
-    // const button = screen.getByRole("button", { name: "Add to cart" });
+    render(<Card item={{id: 1, n: 1}} handleClick={onClick} page='shop' />);
 
-    // await user.click(button);
+    const button = screen.getByRole("button");
 
-    expect(screen.getByRole("button").textContent).toMatch(/add to cart/i);
+    expect(button).toBeInTheDocument();
+
+    await user.click(button);
+
+    expect(onClick).toHaveBeenCalled();
 
   });
 

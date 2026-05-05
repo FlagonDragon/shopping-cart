@@ -3,11 +3,6 @@ import classes from "../styles/AddToCart.module.css";
 
 function AddToCart({ item, handleClick }) {
     const [value, setValue] = useState('');
-    
-    function onClick() {
-        handleClick(item.id, Number(value));
-        setValue('');
-    }
 
     return(
         <div className={classes.container}>
@@ -27,7 +22,10 @@ function AddToCart({ item, handleClick }) {
             ></input>
             <button 
                 className={classes.btnEle}
-                onClick={onClick}
+                onClick={() => {
+                    handleClick(item.id, Number(value))
+                    setValue('')
+                }}
             >Add to Cart</button>
         </div>
     )
